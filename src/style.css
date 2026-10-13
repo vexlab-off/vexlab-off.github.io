@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@import "@fontsource/cormorant-garamond/latin-500.css";
+@import "@fontsource/cormorant-garamond/latin-600.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+
+@theme {
+  --color-ivory: #F7F2E7;
+  --color-cream: #FBF8F0;
+  --color-charcoal: #242321;
+  --color-charcoal-muted: #5C5852;
+  --color-charcoal-faded: #8C867C;
+  --color-terracotta: #B87352;
+  --color-terracotta-hover: #9E5F43;
+  --color-terracotta-light: #F4EAE2;
+  --color-terracotta-surface: #F9F1EB;
+  --color-beige-border: #DED3C0;
+  --color-beige-subtle: #EFE8DC;
+
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --bg-primary: #F7F2E7;
+  --bg-surface: #FBF8F0;
+  --text-primary: #242321;
+  --text-muted: #5C5852;
+  --accent-terracotta: #B87352;
+  --border-beige: #DED3C0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #F4EAE2;
+  color: #B87352;
+}
+
+/* Subtle editorial paper grain */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #B87352;
+  outline-offset: 2px;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F2E7;
+}
+::-webkit-scrollbar-thumb {
+  background: #DED3C0;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B87352;
+}
+
+/* Architectural borders and cards */
+.card-craft {
+  background-color: #FBF8F0;
+  border: 1px solid #DED3C0;
+  box-shadow: 0 2px 12px rgba(36, 35, 33, 0.03);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.card-craft:hover {
+  border-color: #CBB99E;
+  box-shadow: 0 6px 20px rgba(36, 35, 33, 0.05);
+}
+
+/* Architectural buttons - Strictly 2px-3px radius, no pill */
+.btn-terracotta {
+  background-color: #B87352;
+  color: #FBF8F0;
+  border: 1px solid #9E5F43;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn-terracotta:hover {
+  background-color: #A5694A;
+  box-shadow: 0 2px 8px rgba(184, 115, 82, 0.2);
+}
+
+.btn-terracotta:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background-color: #FBF8F0;
+  color: #242321;
+  border: 1px solid #DED3C0;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-outline:hover {
+  background-color: #F4EAE2;
+  border-color: #B87352;
+  color: #B87352;
+}
+
+/* Subtle code card */
+.code-window {
+  background-color: #FBF8F0;
+  border: 1px solid #DED3C0;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(36, 35, 33, 0.05);
+}
+
+/* Modal styles */
+.modal-backdrop {
+  background-color: rgba(36, 35, 33, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* Tag techno */
+.tag {
+  padding: 4px 10px;
+  border: 1px solid #DED3C0;
+  border-radius: 2px;
+  background-color: #F7F2E7;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #242321;
+}
+
+/* Champs de formulaire */
+.field {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #FBF8F0;
+  border: 1px solid #DED3C0;
+  border-radius: 3px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: #242321;
+  transition: border-color 0.15s ease;
+}
+.field:hover { border-color: #CBB99E; }
+.field:focus { border-color: #B87352; outline: none; box-shadow: 0 0 0 3px rgba(184, 115, 82, 0.15); }

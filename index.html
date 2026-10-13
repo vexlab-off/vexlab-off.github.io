@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VEX | Développeur frontend</title>
+    <meta name="description" content="VEX conçoit et développe des interfaces web sur mesure, rapides et maintenables." />
+    <meta name="theme-color" content="#F7F2E7" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script type="module" src="/src/main.js"></script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body class="bg-ivory text-charcoal font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only">Aller au contenu</a>
+
+    <header id="header" class="sticky top-0 z-40 bg-ivory/95 backdrop-blur-sm">
+      <div class="mx-auto max-w-[1120px] px-6">
+        <div class="flex items-center justify-between gap-6 border-b border-beige-border h-16">
+          <a href="#hero" class="flex items-center gap-3 font-serif text-2xl font-semibold tracking-wide" aria-label="VEX, retour en haut">
+            <img src="/logo.png" alt="" width="40" height="40" class="block" />
+            <span>VEX</span>
+          </a>
+
+          <nav aria-label="Navigation principale" class="hidden md:block">
+            <ul class="flex items-center gap-8 text-sm font-medium">
+              <li><a href="#work" class="nav-link relative inline-block py-5 text-charcoal hover:text-terracotta transition-colors">Projets<span class="nav-indicator absolute left-0 bottom-[-1px] h-[2px] w-full bg-terracotta origin-left scale-x-0 transition-transform duration-200"></span></a></li>
+              <li><a href="#services" class="nav-link relative inline-block py-5 text-charcoal hover:text-terracotta transition-colors">Services<span class="nav-indicator absolute left-0 bottom-[-1px] h-[2px] w-full bg-terracotta origin-left scale-x-0 transition-transform duration-200"></span></a></li>
+              <li><a href="#process" class="nav-link relative inline-block py-5 text-charcoal hover:text-terracotta transition-colors">Méthode<span class="nav-indicator absolute left-0 bottom-[-1px] h-[2px] w-full bg-terracotta origin-left scale-x-0 transition-transform duration-200"></span></a></li>
+              <li><a href="#contact" class="nav-link relative inline-block py-5 text-charcoal hover:text-terracotta transition-colors">Contact<span class="nav-indicator absolute left-0 bottom-[-1px] h-[2px] w-full bg-terracotta origin-left scale-x-0 transition-transform duration-200"></span></a></li>
+            </ul>
+          </nav>
+
+          <p class="flex items-center gap-2 font-mono text-xs text-charcoal-muted">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="text-terracotta" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>Paris</span>
+            <time id="paris-clock" class="tabular-nums text-charcoal">--:--:--</time>
+          </p>
+        </div>
+
+        <nav aria-label="Navigation mobile" class="md:hidden border-b border-beige-border">
+          <ul class="flex items-center justify-between py-3 text-sm font-medium">
+            <li><a href="#work" class="text-charcoal hover:text-terracotta">Projets</a></li>
+            <li><a href="#services" class="text-charcoal hover:text-terracotta">Services</a></li>
+            <li><a href="#process" class="text-charcoal hover:text-terracotta">Méthode</a></li>
+            <li><a href="#contact" class="text-charcoal hover:text-terracotta">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="hero" aria-labelledby="hero-title" class="mx-auto max-w-[1120px] px-6 py-16 md:py-24">
+        <div class="grid md:grid-cols-2 items-center">
+          <div class="md:pr-12 md:border-r border-beige-border">
+            <p class="font-mono text-xs uppercase tracking-widest text-terracotta mb-6">Développeur frontend indépendant</p>
+            <h1 id="hero-title" class="font-serif font-medium text-charcoal leading-[0.98] text-6xl md:text-7xl lg:text-8xl">
+              Concevoir.<br />Livrer.<br />Maintenir.
+            </h1>
+            <p class="mt-8 max-w-[44ch] text-lg leading-relaxed text-charcoal-muted">
+              Je développe des sites et des interfaces web sur mesure. HTML sémantique, CSS maîtrisé, JavaScript sans surcouche inutile. Du code lisible que votre équipe peut reprendre.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <a href="#contact" class="btn-terracotta inline-flex items-center gap-2 px-6 py-3 text-sm">
+                Démarrer un projet
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="#work" class="inline-flex items-center gap-2 text-sm font-medium border-b border-terracotta pb-1 hover:text-terracotta transition-colors">
+                Voir les projets
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-terracotta" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-16 md:mt-0 md:pl-12" aria-hidden="true">
+            <svg viewBox="0 0 440 130" fill="none" stroke="#B87352" stroke-width="2" stroke-linecap="square" class="w-full max-w-[440px] mx-auto">
+              <rect x="10" y="10" width="76" height="76" rx="4"/>
+              <path d="M36 42l-8 8 8 8M60 42l8 8-8 8M52 40l-4 20" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="182" y="10" width="76" height="76" rx="4"/>
+              <path d="M200 34h40M200 48h40M200 62h40" stroke-linecap="round"/>
+              <rect x="354" y="10" width="76" height="76" rx="4"/>
+              <path d="M370 70l16-18 12 12 8-8 12 14" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="400" cy="36" r="5"/>
+              <path d="M86 48h96M258 48h96"/>
+              <path d="M48 86v44M220 86v44M392 86v44" stroke-dasharray="3 5"/>
+              <circle cx="134" cy="48" r="4" fill="#B87352"/>
+              <circle cx="306" cy="48" r="4" fill="#B87352"/>
+            </svg>
+            <div class="code-window mt-6 mx-auto max-w-[440px] p-6">
+              <pre class="font-mono text-[13px] leading-7 text-charcoal overflow-x-auto"><code>const deploy = async () =&gt; {
+  await build();
+  return ship();
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" aria-labelledby="services-title" class="mx-auto max-w-[1120px] px-6 py-16 md:py-24 border-t border-beige-border">
+        <p class="font-mono text-xs uppercase tracking-widest text-terracotta mb-4">01 / Services</p>
+        <h2 id="services-title" class="font-serif font-medium text-4xl md:text-5xl leading-tight max-w-[18ch]">Trois choses, bien faites.</h2>
+
+        <ul class="mt-12 grid gap-6 md:grid-cols-3">
+          <li class="card-craft rounded-[4px] p-8">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B87352" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <h3 class="mt-6 font-serif text-2xl font-medium">Architecture UI</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Grille, typographie, composants et tokens définis avant la première ligne de code. Une base cohérente qui évite les rustines.</p>
+          </li>
+          <li class="card-craft rounded-[4px] p-8">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B87352" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/></svg>
+            <h3 class="mt-6 font-serif text-2xl font-medium">Développement frontend sur mesure</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">HTML sémantique, Tailwind CSS configuré pour votre identité, JavaScript natif quand il suffit. Pas de template, pas de dépendance gratuite.</p>
+          </li>
+          <li class="card-craft rounded-[4px] p-8">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B87352" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 12l5-4"/><path d="M5 20h14"/></svg>
+            <h3 class="mt-6 font-serif text-2xl font-medium">Intégration et performance</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Maquettes intégrées au pixel près, accessibles au clavier, légères au chargement. Mesuré avec des outils, pas promis à l'oral.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="work" aria-labelledby="work-title" class="mx-auto max-w-[1120px] px-6 py-16 md:py-24 border-t border-beige-border">
+        <p class="font-mono text-xs uppercase tracking-widest text-terracotta mb-4">02 / Projets</p>
+        <h2 id="work-title" class="font-serif font-medium text-4xl md:text-5xl leading-tight max-w-[18ch]">Sélection de travaux.</h2>
+
+        <ul class="mt-12 grid gap-6 md:grid-cols-2">
+          <li class="card-craft rounded-[4px] p-8 md:col-span-2 grid md:grid-cols-[1fr_auto] gap-8 items-end">
+            <article>
+              <p class="font-mono text-xs uppercase tracking-widest text-charcoal-faded">Site vitrine</p>
+              <h3 class="mt-3 font-serif text-3xl font-medium">Portfolio VEX</h3>
+              <p class="mt-3 max-w-[56ch] text-[15px] leading-relaxed text-charcoal-muted">Le site que vous lisez. Design system issu d'un moodboard, composants écrits à la main, aucune bibliothèque d'interface, aucun traceur.</p>
+              <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies">
+                <li class="tag">HTML5</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Vite</li>
+              </ul>
+            </article>
+            <a href="#hero" class="inline-flex items-center gap-2 text-sm font-medium border-b border-terracotta pb-1 hover:text-terracotta transition-colors">
+              Voir le haut de page
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B87352" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+            </a>
+          </li>
+
+          <li class="card-craft rounded-[4px] p-8 flex flex-col">
+            <p class="font-mono text-xs uppercase tracking-widest text-charcoal-faded">Environnement Linux</p>
+            <h3 class="mt-3 font-serif text-3xl font-medium">Kortex System</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Environnement de bureau complet sur Arch Linux : Hyprland, shell personnalisé, dotfiles et script d'installation. Configuration modulaire, versionnée et reproductible sur une machine neuve.</p>
+            <ul class="flex flex-wrap gap-2 mt-auto pt-6" aria-label="Technologies">
+              <li class="tag">Arch Linux</li>
+              <li class="tag">Hyprland</li>
+              <li class="tag">Lua</li>
+              <li class="tag">Shell</li>
+            </ul>
+          </li>
+          <li class="card-craft rounded-[4px] p-8 flex flex-col">
+            <p class="font-mono text-xs uppercase tracking-widest text-charcoal-faded">Widget de bureau</p>
+            <h3 class="mt-3 font-serif text-3xl font-medium">KortexPay</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Portefeuille de cartes intégré à la barre du bureau Kortex. Interface en QML, données chiffrées en AES-256 et copie rapide avec effacement automatique du presse-papier.</p>
+            <ul class="flex flex-wrap gap-2 mt-auto pt-6" aria-label="Technologies">
+              <li class="tag">QML</li>
+              <li class="tag">Quickshell</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="process" aria-labelledby="process-title" class="mx-auto max-w-[1120px] px-6 py-16 md:py-24 border-t border-beige-border">
+        <p class="font-mono text-xs uppercase tracking-widest text-terracotta mb-4">03 / Méthode</p>
+        <h2 id="process-title" class="font-serif font-medium text-4xl md:text-5xl leading-tight max-w-[18ch]">Un cadre simple.</h2>
+
+        <ol class="mt-12 grid gap-px bg-beige-border border border-beige-border rounded-[4px] overflow-hidden md:grid-cols-4">
+          <li class="bg-cream p-8">
+            <span class="font-mono text-xs text-terracotta">01</span>
+            <h3 class="mt-4 font-serif text-2xl font-medium">Cadrage</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">On définit le besoin, le périmètre et les contraintes par écrit.</p>
+          </li>
+          <li class="bg-cream p-8">
+            <span class="font-mono text-xs text-terracotta">02</span>
+            <h3 class="mt-4 font-serif text-2xl font-medium">Conception</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Structure, système visuel et composants validés avant le développement.</p>
+          </li>
+          <li class="bg-cream p-8">
+            <span class="font-mono text-xs text-terracotta">03</span>
+            <h3 class="mt-4 font-serif text-2xl font-medium">Développement</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Itérations courtes, code relu, livraisons que vous pouvez tester.</p>
+          </li>
+          <li class="bg-cream p-8">
+            <span class="font-mono text-xs text-terracotta">04</span>
+            <h3 class="mt-4 font-serif text-2xl font-medium">Livraison</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-charcoal-muted">Mise en ligne, documentation du code et passation à votre équipe.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title" class="mx-auto max-w-[1120px] px-6 py-16 md:py-24 border-t border-beige-border">
+        <div class="grid gap-12 md:grid-cols-2">
+          <div>
+            <p class="font-mono text-xs uppercase tracking-widest text-terracotta mb-4">04 / Contact</p>
+            <h2 id="contact-title" class="font-serif font-medium text-4xl md:text-5xl leading-tight max-w-[14ch]">Un projet à cadrer ?</h2>
+            <p class="mt-6 max-w-[40ch] text-lg leading-relaxed text-charcoal-muted">Décrivez le besoin en quelques lignes : contexte, échéance, contraintes techniques. Je réponds par écrit.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-6" novalidate data-email="louka.vex@gmail.com">
+            <div>
+              <label for="contact-name" class="block text-sm font-medium mb-2">Nom</label>
+              <input id="contact-name" name="name" type="text" required autocomplete="name" class="field" />
+            </div>
+            <div>
+              <label for="contact-email" class="block text-sm font-medium mb-2">Email</label>
+              <input id="contact-email" name="email" type="email" required autocomplete="email" class="field" />
+            </div>
+            <div>
+              <label for="contact-message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea id="contact-message" name="message" rows="5" required class="field"></textarea>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+              <button type="submit" class="btn-terracotta inline-flex items-center gap-2 px-6 py-3 text-sm cursor-pointer">
+                Envoyer
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="text-xs text-charcoal-faded max-w-[34ch]">Le message s'ouvre dans votre application mail. Rien n'est stocké sur ce site.</p>
+            </div>
+            <p id="contact-feedback" class="hidden text-sm" role="alert"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="border-t border-beige-border">
+      <div class="mx-auto max-w-[1120px] px-6 py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between text-sm text-charcoal-muted">
+        <p class="flex items-center gap-3">
+          <img src="/logo.png" alt="" width="28" height="28" />
+          <span>VEX, 2026. Tous droits réservés.</span>
+        </p>
+        <nav aria-label="Informations légales">
+          <ul class="flex gap-6">
+            <li><a href="/privacy.html" class="hover:text-terracotta transition-colors">Politique de confidentialité</a></li>
+            <li><a href="/cgu.html" class="hover:text-terracotta transition-colors">CGU</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
