@@ -1,3 +1,4 @@
+// VEX Portfolio v2.0.0
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'node:path';

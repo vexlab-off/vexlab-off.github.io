@@ -1,5 +1,5 @@
 /**
- * VEX : scripts du site. JavaScript natif, aucune dépendance.
+ * VEX Portfolio v2.0.0 : scripts du site. JavaScript natif, aucune dépendance.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
