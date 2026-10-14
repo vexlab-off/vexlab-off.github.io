@@ -10,9 +10,9 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        privacy: resolve(__dirname, 'privacy.html'),
-        cgu: resolve(__dirname, 'cgu.html'),
+        main: resolve(import.meta.dirname, 'index.html'),
+        privacy: resolve(import.meta.dirname, 'privacy.html'),
+        cgu: resolve(import.meta.dirname, 'cgu.html'),
       },
     },
   },

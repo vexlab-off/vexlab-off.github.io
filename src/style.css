@@ -7,6 +7,8 @@
 @import "@fontsource/jetbrains-mono/latin-400.css";
 @import "@fontsource/jetbrains-mono/latin-500.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-ivory: #F7F2E7;
   --color-cream: #FBF8F0;
@@ -27,18 +29,57 @@
 
 :root {
   color-scheme: light;
-  --bg-primary: #F7F2E7;
-  --bg-surface: #FBF8F0;
-  --text-primary: #242321;
-  --text-muted: #5C5852;
-  --accent-terracotta: #B87352;
-  --border-beige: #DED3C0;
+  --color-ivory: #F7F2E7;
+  --color-cream: #FBF8F0;
+  --color-charcoal: #242321;
+  --color-charcoal-muted: #5C5852;
+  --color-charcoal-faded: #8C867C;
+  --color-terracotta: #B87352;
+  --color-terracotta-hover: #9E5F43;
+  --color-terracotta-light: #F4EAE2;
+  --color-terracotta-surface: #F9F1EB;
+  --color-beige-border: #DED3C0;
+  --color-beige-subtle: #EFE8DC;
+
+  --card-bg: #FBF8F0;
+  --card-border: #DED3C0;
+  --card-border-hover: #CBB99E;
+  --card-shadow: 0 2px 12px rgba(36, 35, 33, 0.03);
+  --card-shadow-hover: 0 6px 20px rgba(36, 35, 33, 0.05);
+
+  --selection-bg: #F4EAE2;
+  --selection-text: #B87352;
+}
+
+html.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ivory: #151413;
+  --color-cream: #1D1C1A;
+  --color-charcoal: #EFEAE1;
+  --color-charcoal-muted: #A39E93;
+  --color-charcoal-faded: #757067;
+  --color-terracotta: #C97D5C;
+  --color-terracotta-hover: #DD8F6D;
+  --color-terracotta-light: #2A211B;
+  --color-terracotta-surface: #221A15;
+  --color-beige-border: #2E2B26;
+  --color-beige-subtle: #24221E;
+
+  --card-bg: #1D1C1A;
+  --card-border: #2E2B26;
+  --card-border-hover: #48433C;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.45);
+
+  --selection-bg: #35251C;
+  --selection-text: #E59873;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,8 +87,8 @@ html {
 }
 
 ::selection {
-  background-color: #F4EAE2;
-  color: #B87352;
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 /* Subtle editorial paper grain */
@@ -58,7 +99,7 @@ html {
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #B87352;
+  outline: 2px solid var(--color-terracotta);
   outline-offset: 2px;
 }
 
@@ -68,34 +109,34 @@ html {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F7F2E7;
+  background: var(--color-ivory);
 }
 ::-webkit-scrollbar-thumb {
-  background: #DED3C0;
+  background: var(--color-beige-border);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B87352;
+  background: var(--color-terracotta);
 }
 
 /* Architectural borders and cards */
 .card-craft {
-  background-color: #FBF8F0;
-  border: 1px solid #DED3C0;
-  box-shadow: 0 2px 12px rgba(36, 35, 33, 0.03);
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
 }
 
 .card-craft:hover {
-  border-color: #CBB99E;
-  box-shadow: 0 6px 20px rgba(36, 35, 33, 0.05);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* Architectural buttons - Strictly 2px-3px radius, no pill */
 .btn-terracotta {
-  background-color: #B87352;
+  background-color: var(--color-terracotta);
   color: #FBF8F0;
-  border: 1px solid #9E5F43;
+  border: 1px solid var(--color-terracotta-hover);
   border-radius: 3px;
   font-family: var(--font-sans);
   font-weight: 500;
@@ -103,7 +144,7 @@ html {
 }
 
 .btn-terracotta:hover {
-  background-color: #A5694A;
+  background-color: var(--color-terracotta-hover);
   box-shadow: 0 2px 8px rgba(184, 115, 82, 0.2);
 }
 
@@ -112,9 +153,9 @@ html {
 }
 
 .btn-outline {
-  background-color: #FBF8F0;
-  color: #242321;
-  border: 1px solid #DED3C0;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-beige-border);
   border-radius: 3px;
   font-family: var(--font-sans);
   font-weight: 500;
@@ -122,47 +163,55 @@ html {
 }
 
 .btn-outline:hover {
-  background-color: #F4EAE2;
-  border-color: #B87352;
-  color: #B87352;
+  background-color: var(--color-terracotta-light);
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
 }
 
 /* Subtle code card */
 .code-window {
-  background-color: #FBF8F0;
-  border: 1px solid #DED3C0;
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-beige-border);
   border-radius: 4px;
-  box-shadow: 0 4px 20px rgba(36, 35, 33, 0.05);
+  box-shadow: var(--card-shadow);
 }
 
 /* Modal styles */
 .modal-backdrop {
-  background-color: rgba(36, 35, 33, 0.45);
+  background-color: rgba(20, 19, 18, 0.6);
   backdrop-filter: blur(3px);
 }
 
 /* Tag techno */
 .tag {
   padding: 4px 10px;
-  border: 1px solid #DED3C0;
+  border: 1px solid var(--color-beige-border);
   border-radius: 2px;
-  background-color: #F7F2E7;
+  background-color: var(--color-ivory);
   font-family: var(--font-mono);
   font-size: 12px;
-  color: #242321;
+  color: var(--color-charcoal);
+  line-height: 1.4;
 }
 
 /* Champs de formulaire */
 .field {
   width: 100%;
   padding: 12px 14px;
-  background-color: #FBF8F0;
-  border: 1px solid #DED3C0;
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-beige-border);
   border-radius: 3px;
   font-family: var(--font-sans);
   font-size: 15px;
-  color: #242321;
-  transition: border-color 0.15s ease;
+  color: var(--color-charcoal);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.field:hover { border-color: #CBB99E; }
-.field:focus { border-color: #B87352; outline: none; box-shadow: 0 0 0 3px rgba(184, 115, 82, 0.15); }
+.field:hover { border-color: var(--card-border-hover); }
+.field:focus {
+  border-color: var(--color-terracotta);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(184, 115, 82, 0.2);
+}
+.field::placeholder {
+  color: var(--color-charcoal-faded);
+}

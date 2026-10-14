@@ -6,19 +6,50 @@
     <title>Politique de confidentialité | VEX</title>
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#F7F2E7" />
+
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = stored ? stored === 'dark' : prefersDark;
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body class="bg-ivory text-charcoal font-sans antialiased">
-    <header class="border-b border-beige-border">
+  <body class="bg-ivory text-charcoal font-sans antialiased transition-colors duration-150">
+    <header class="border-b border-beige-border sticky top-0 z-40 bg-ivory/95 backdrop-blur-sm transition-colors duration-150">
       <div class="mx-auto max-w-[760px] px-6 h-16 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-3 font-serif text-2xl font-semibold tracking-wide">
-          <img src="/logo.png" alt="" width="40" height="40" class="block" />
+        <a href="/" class="flex items-center gap-3 font-serif text-2xl font-semibold tracking-wide text-charcoal">
+          <img src="/logo.png" alt="" width="36" height="36" class="block" />
           <span>VEX</span>
         </a>
-        <a href="/" class="text-sm font-medium border-b border-terracotta pb-1 hover:text-terracotta transition-colors">Retour au site</a>
+        <div class="flex items-center gap-4">
+          <a href="/" class="text-sm font-medium border-b border-terracotta pb-1 hover:text-terracotta transition-colors text-charcoal">Retour au site</a>
+          <button type="button" data-theme-toggle aria-label="Changer de thème" class="p-1.5 rounded-[3px] border border-beige-border text-charcoal-muted hover:text-charcoal hover:border-terracotta transition-colors cursor-pointer" title="Changer de thème">
+            <svg class="hidden dark:block w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="block dark:hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -47,7 +78,6 @@
 
       <section>
         <h2 class="font-serif text-2xl font-medium text-charcoal mb-3">Hébergement</h2>
-        <!-- TODO: Remplacer par l'hébergeur choisi -->
         <p>Site en cours de déploiement, coordonnées de l'hébergeur mises à jour dès la mise en production. L'hébergeur peut conserver des journaux techniques de connexion (adresse IP, date, page demandée) pour la sécurité et le bon fonctionnement du service.</p>
       </section>
 
