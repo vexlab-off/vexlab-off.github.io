@@ -177,7 +177,11 @@
           <div class="soon" id="disponibilite">
             <div>
               <h2>Téléchargeable maintenant.</h2>
-              <p>Un paquet Arch par app, construit depuis le code publié sur GitHub. Installez-le avec <code>sudo pacman -U</code> suivi du fichier, ou construisez-le vous-même avec le PKGBUILD du dépôt.</p>
+              <p>Ajoutez une fois le dépôt de la suite à la fin de <code>/etc/pacman.conf</code> :</p>
+              <pre>[suite-flair]
+SigLevel = Optional TrustAll
+Server = https://vexlab-off.github.io/arch/$arch</pre>
+              <p>Puis <code>sudo pacman -Syu suite-flair</code> installe les trois apps, ou une seule : <code>flair</code>, <code>flair-code</code>, <code>flair-web</code>. Les mises à jour arrivent avec <code>sudo pacman -Syu</code>. Les paquets se téléchargent aussi à droite, avec leur code source.</p>
             </div>
             <div class="downloads">
               <a class="dl" href="https://github.com/vexlab-off/flair/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>flair 0.2.0</a>
@@ -198,7 +202,7 @@
             </details>
             <details>
               <summary>Où la télécharger ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
-              <div><p>Sur GitHub : chaque app a sa page de versions avec le paquet Arch et sa somme de contrôle, et son code source sous licence MIT (<a href="https://github.com/vexlab-off/flair">flair</a>, <a href="https://github.com/vexlab-off/flaircode">Flair Code</a>, <a href="https://github.com/vexlab-off/flairweb">Flair Web</a>). Une question ou un bug : <a href="mailto:louka.vex@gmail.com?subject=La%20suite%20flair">écrivez un mail</a> ou ouvrez une issue sur GitHub.</p></div>
+              <div><p>Avec pacman, depuis le dépôt de la suite (voir plus haut) : <code>sudo pacman -Syu suite-flair</code>. Sinon sur GitHub : chaque app a sa page de versions avec le paquet Arch et sa somme de contrôle, et son code source sous licence MIT (<a href="https://github.com/vexlab-off/flair">flair</a>, <a href="https://github.com/vexlab-off/flaircode">Flair Code</a>, <a href="https://github.com/vexlab-off/flairweb">Flair Web</a>). Une question ou un bug : <a href="mailto:louka.vex@gmail.com?subject=La%20suite%20flair">écrivez un mail</a> ou ouvrez une issue sur GitHub.</p></div>
             </details>
             <details>
               <summary>Sur quel système fonctionnent-elles ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>

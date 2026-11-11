@@ -185,6 +185,9 @@ section.block { padding: 112px 0 0; }
 .soon h2 { font-size: clamp(1.7rem, 1.2rem + 1.5vw, 2.4rem); letter-spacing: -0.025em; line-height: 1.1; }
 .soon p { margin-top: 12px; font-size: 17px; max-width: 54ch; color: #3b2516; }
 .soon .downloads { display: grid; gap: 10px; }
+.soon pre { margin-top: 12px; font: 500 14px/1.55 var(--mono); background: var(--ink); color: var(--cream); border-radius: 6px; padding: 12px 16px; overflow-x: auto; max-width: 54ch; }
+.soon p + p { margin-top: 12px; }
+.faq code { font: 500 13px var(--mono); }
 .soon code { font: 500 14px var(--mono); background: rgba(27, 18, 11, 0.12); border-radius: 4px; padding: 1px 6px; }
 a.status { text-decoration: none; color: var(--text); }
 a.status:hover { color: var(--orange); }
