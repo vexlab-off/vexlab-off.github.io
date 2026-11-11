@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La suite flair | flair, Flair Code et Flair Web pour Linux</title>
+    <meta name="description" content="flair, Flair Code et Flair Web : un explorateur de fichiers, un éditeur de code et un navigateur pour Arch Linux, écrits en C++ et Qt Quick. Paquets Arch et code source sur GitHub, sous licence MIT." />
+    <meta name="theme-color" content="#121214" />
+    <link rel="icon" href="/flair/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/flair/flair.svg" />
+    <link rel="apple-touch-icon" href="/flair/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/src/flair.css" />
+    <script type="module" src="/src/flair.js"></script>
+  </head>
+
+  <body>
+    <a class="skip" href="#apps">Aller au contenu</a>
+
+    <header class="bar">
+      <div class="wrap">
+        <a class="brand" href="#apps"><img src="/flair/flair.svg" alt="" width="28" height="28" />la suite flair</a>
+        <nav aria-label="Sections">
+          <ul>
+            <li><a href="#apps">Les apps</a></li>
+            <li><a href="#partage">Ce qu'elles partagent</a></li>
+            <li><a href="#technique">Comment c'est fait</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <a class="status" href="#disponibilite">Télécharger</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap" id="apps">
+        <div class="intro">
+          <h1>Un explorateur de fichiers, un éditeur de code et un navigateur pour Linux.</h1>
+          <p>flair, Flair Code et Flair Web sont des applications natives pour Arch Linux, écrites en C++ et Qt Quick. Elles partagent leur couleur, leurs réglages et leur assistant IA, qui peut tourner sur votre machine.</p>
+        </div>
+
+        <div role="tablist" aria-label="Choisir une application" class="tiles" id="launcher">
+          <button class="tile" role="tab" id="tab-flair" aria-controls="app-flair" aria-selected="true">
+            <img src="/flair/flair.svg" alt="" width="108" height="108" />
+            <span>flair</span>
+            <span class="hint">fichiers</span>
+          </button>
+          <button class="tile" role="tab" id="tab-flaircode" aria-controls="app-flaircode" aria-selected="false" tabindex="-1">
+            <img src="/flair/flaircode.svg" alt="" width="108" height="108" />
+            <span>Flair Code</span>
+            <span class="hint">code</span>
+          </button>
+          <button class="tile" role="tab" id="tab-flairweb" aria-controls="app-flairweb" aria-selected="false" tabindex="-1">
+            <img src="/flair/flairweb.svg" alt="" width="108" height="108" />
+            <span>Flair Web</span>
+            <span class="hint">web</span>
+          </button>
+        </div>
+
+        <div class="window">
+          <div class="titlebar" aria-hidden="true">
+            <span id="window-title"><strong>flair</strong>, Projets / jardin-partage</span>
+            <svg viewBox="0 0 12 12" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M2 2l8 8M10 2l-8 8" /></svg>
+          </div>
+
+          <div class="panel" role="tabpanel" id="app-flair" aria-labelledby="tab-flair" data-title="<strong>flair</strong>, Projets / jardin-partage">
+            <div class="shot">
+              <picture><source media="(max-width: 720px)" srcset="/flair/flair-mobile.webp?v=2" width="780" height="1232" /><img src="/flair/flair.webp?v=2" width="1800" height="1112" alt="flair ouvert sur le dossier du site d'un jardin partagé : la liste des fichiers avec leurs icônes, style.css marqué comme modifié dans Git, index.html sélectionné et sa page rendue en direct dans le panneau Aperçu à droite." /></picture>
+            </div>
+            <div class="side">
+              <h2><img src="/flair/flair.svg" alt="" width="30" height="30" />flair</h2>
+              <p class="job">Un explorateur de fichiers qui lit, cherche et range avec l'IA, entièrement au clavier.</p>
+              <ul class="keys">
+                <li><span class="key-head"><span class="combo"><kbd>Espace</kbd></span><b>Aperçu</b></span><span class="desc">Une page HTML s'affiche rendue, le reste (texte, code, PDF) est résumé.</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>/</kbd></span><b>Recherche par le sens</b></span><span class="desc">« la facture d'électricité de l'an dernier », sans connaître le nom du fichier.</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>:</kbd></span><b>Ranger en une phrase</b></span><span class="desc">« range les captures par mois » donne un plan que vous validez avant que rien ne bouge.</span></li>
+              </ul>
+              <ul class="more">
+                <li>Les plans ne suppriment et n'écrasent rien, et Ctrl+Z les annule.</li>
+                <li>Statut Git dans la liste, vos dépôts GitHub dans la barre latérale.</li>
+                <li>Images, musique et vidéos s'ouvrent dans flair.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="app-flaircode" aria-labelledby="tab-flaircode" data-title="<strong>Flair Code</strong>, jardin-partage / app.js" hidden>
+            <div class="shot">
+              <picture><source media="(max-width: 720px)" srcset="/flair/flaircode-mobile.webp?v=2" width="780" height="940" /><img src="/flair/flaircode.webp?v=2" width="1800" height="1095" alt="Flair Code avec l'arborescence du projet à gauche, chaque fichier marqué du logo de son langage, et un fichier JavaScript coloré à droite. La barre d'état montre la branche Git, l'encodage, le langage et le fournisseur IA." loading="lazy" /></picture>
+            </div>
+            <div class="side">
+              <h2><img src="/flair/flaircode.svg" alt="" width="30" height="30" />Flair Code</h2>
+              <p class="job">Un éditeur de code avec un assistant IA, l'aperçu en direct et une palette de commandes.</p>
+              <ul class="keys">
+                <li><span class="key-head"><span class="combo"><kbd>Ctrl</kbd><kbd>K</kbd></span><b>Modifier avec l'IA</b></span><span class="desc">Décrivez le changement, l'avant et l'après s'affichent, Ctrl+Entrée accepte.</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>Ctrl</kbd><kbd>L</kbd></span><b>Discuter du fichier</b></span><span class="desc">Avec Claude, OpenAI, Gemini ou un modèle local (LM Studio, Ollama).</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>Ctrl</kbd><kbd>Maj</kbd><kbd>V</kbd></span><b>Aperçu en direct</b></span><span class="desc">HTML et SVG rendus à chaque frappe, Markdown mis en forme.</span></li>
+              </ul>
+              <ul class="more">
+                <li>Coloration de C/C++, Python, Rust, Go, QML et onze autres langages.</li>
+                <li>Enregistrement atomique : un fichier n'est jamais écrit à moitié.</li>
+                <li>Un fichier modifié ailleurs se recharge, sauf si vous l'avez modifié aussi.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="app-flairweb" aria-labelledby="tab-flairweb" data-title="<strong>Flair Web</strong>, Nouvel onglet" hidden>
+            <div class="shot">
+              <picture><source media="(max-width: 720px)" srcset="/flair/flairweb-mobile.webp?v=2" width="780" height="894" /><img src="/flair/flairweb.webp?v=2" width="1800" height="1157" alt="Flair Web sur la page de nouvel onglet : l'heure, la recherche avec DuckDuckGo, les moteurs à portée de clic et les raccourcis avec le logo de chaque site, les pages à reprendre en bas. Trois onglets restaurés dans la colonne de gauche, la barre de favoris en haut." loading="lazy" /></picture>
+            </div>
+            <div class="side">
+              <h2><img src="/flair/flairweb.svg" alt="" width="30" height="30" />Flair Web</h2>
+              <p class="job">Un navigateur avec le moteur de recherche de votre choix, un bouclier anti-pistage et les extensions Chrome.</p>
+              <ul class="keys">
+                <li><span class="key-head"><span class="combo"><kbd>Ctrl</kbd><kbd>K</kbd></span><b>Choisir le moteur</b></span><span class="desc">DuckDuckGo, Startpage, Brave, Qwant, Google… ou les vôtres. « yt chats » cherche sur YouTube.</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>F9</kbd></span><b>Mode lecture</b></span><span class="desc">L'article seul, avec sa police, sa largeur et son thème.</span></li>
+                <li><span class="key-head"><span class="combo"><kbd>Ctrl</kbd><kbd>Maj</kbd><kbd>A</kbd></span><b>Assistant de page</b></span><span class="desc">Résumer, traduire ou poser une question sur la page.</span></li>
+              </ul>
+              <ul class="more">
+                <li>Le bouclier bloque pubs et traceurs, et compte ce qu'il bloque sur chaque page.</li>
+                <li>Extensions Chrome : uBlock Origin Lite, Bitwarden et Dark Reader testés.</li>
+                <li>Les onglets privés ne laissent rien sur le disque.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="caption">Captures réelles des applications, en développement. Les flèches du clavier passent d'une app à l'autre.</p>
+      </div>
+
+      <section class="block" id="partage" aria-labelledby="partage-title">
+        <div class="wrap">
+          <h2 class="title" id="partage-title">Trois apps, une seule façon de faire.</h2>
+          <p class="lead">Chaque application s'utilise seule. Installées ensemble, elles se reconnaissent.</p>
+
+          <div class="shared">
+            <div>
+              <h3>Une couleur pour les trois</h3>
+              <p>La couleur d'accent choisie dans flair s'applique à Flair Code et Flair Web, jusqu'à leurs icônes dans le lanceur. Elle peut aussi suivre le thème de Vex.</p>
+              <div class="swatches" aria-hidden="true">
+                <img src="/flair/flair.svg" alt="" width="44" height="44" />
+                <img src="/flair/flair-ambre.svg" alt="" width="44" height="44" />
+                <img src="/flair/flair-bleu.svg" alt="" width="44" height="44" />
+              </div>
+            </div>
+            <div>
+              <h3>Des réglages partagés</h3>
+              <p>La clé d'API saisie dans flair sert aux deux autres. Les réglages restent dans des fichiers lisibles, comme <code>~/.config/flair/flair.conf</code>, en mode 0600.</p>
+            </div>
+            <div>
+              <h3>L'IA chez vous, si vous voulez</h3>
+              <p>Un modèle local (LM Studio, Ollama) ou votre propre clé Claude, OpenAI ou Gemini. La recherche par le sens de flair calcule toujours ses index sur votre machine. Rien ne passe par un serveur de flair : il n'y en a pas.</p>
+            </div>
+            <div>
+              <h3>Elles s'appellent entre elles</h3>
+              <p>flair ouvre le code dans Flair Code et les pages dans Flair Web. Un téléchargement de Flair Web s'affiche dans flair en un clic.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="technique" aria-labelledby="technique-title">
+        <div class="wrap">
+          <h2 class="title" id="technique-title">Comment c'est fait</h2>
+          <div class="stack">
+            <div>
+              <p>Pas de page web déguisée en application : l'interface est en Qt Quick, le reste en C++. Les trois apps démarrent vite et restent légères, sauf Flair Web, qui embarque le moteur Chromium de Qt WebEngine.</p>
+              <p>Chacune a ses tests unitaires, ses réglages dans un fichier texte et un paquet Arch construit par un PKGBUILD.</p>
+            </div>
+            <dl>
+              <dt>Langage</dt><dd>C++17</dd>
+              <dt>Interface</dt><dd>Qt 6, Qt Quick (QML)</dd>
+              <dt>Web</dt><dd>Qt WebEngine (Chromium)</dd>
+              <dt>Construction</dt><dd>qmake, paquets Arch</dd>
+              <dt>Système</dt><dd>Arch Linux, Wayland ou X11</dd>
+              <dt>Licence</dt><dd>MIT</dd>
+            </dl>
+          </div>
+
+          <div class="soon" id="disponibilite">
+            <div>
+              <h2>Téléchargeable maintenant.</h2>
+              <p>Un paquet Arch par app, construit depuis le code publié sur GitHub. Installez-le avec <code>sudo pacman -U</code> suivi du fichier, ou construisez-le vous-même avec le PKGBUILD du dépôt.</p>
+            </div>
+            <div class="downloads">
+              <a class="dl" href="https://github.com/vexlab-off/flair/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>flair 0.2.0</a>
+              <a class="dl" href="https://github.com/vexlab-off/flaircode/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>Flair Code 0.1.0</a>
+              <a class="dl" href="https://github.com/vexlab-off/flairweb/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>Flair Web 0.2.0</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <h2 class="title" id="faq-title">Questions</h2>
+          <div class="faq">
+            <details open>
+              <summary>Qui fait la suite flair ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div><p>La suite flair est créée par vex, développeur frontend indépendant. Le reste de son travail est sur <a href="/">son portfolio</a>.</p></div>
+            </details>
+            <details>
+              <summary>Où la télécharger ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div><p>Sur GitHub : chaque app a sa page de versions avec le paquet Arch et sa somme de contrôle, et son code source sous licence MIT (<a href="https://github.com/vexlab-off/flair">flair</a>, <a href="https://github.com/vexlab-off/flaircode">Flair Code</a>, <a href="https://github.com/vexlab-off/flairweb">Flair Web</a>). Une question ou un bug : <a href="mailto:louka.vex@gmail.com?subject=La%20suite%20flair">écrivez un mail</a> ou ouvrez une issue sur GitHub.</p></div>
+            </details>
+            <details>
+              <summary>Sur quel système fonctionnent-elles ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div><p>Sur Arch Linux avec Qt 6, sous Wayland ou X11. Sur Vex, la distribution de vex, elles suivent en plus le thème du bureau.</p></div>
+            </details>
+            <details>
+              <summary>Faut-il un compte ou un abonnement ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div><p>Non. Les apps fonctionnent sans IA. Pour l'assistant, vous utilisez un modèle local gratuit ou la clé de votre propre fournisseur, qui vous facture directement.</p></div>
+            </details>
+            <details>
+              <summary>Mes fichiers partent-ils sur internet ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div>
+                <p>Pas avec un modèle local. Avec une IA en ligne, seul ce que vous lui demandez de lire part chez le fournisseur choisi : un fichier à résumer, une sélection de code, une page web.</p>
+                <p>Les index de la recherche par le sens sont toujours calculés sur votre machine.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Le code sera-t-il ouvert ?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+              <div><p>Oui, sous licence MIT, publié en même temps que les paquets.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <p class="made"><img src="/flair/flair.svg" alt="" width="22" height="22" />La suite flair, créée par vex. 2026.</p>
+        <nav aria-label="Informations">
+          <ul>
+            <li><a href="/flair/confidentialite.html">Confidentialité</a></li>
+            <li><a href="/flair/cgu.html">CGU</a></li>
+            <li><a href="/">Portfolio de vex</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
