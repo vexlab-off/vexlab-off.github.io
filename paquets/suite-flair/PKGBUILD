@@ -1,0 +1,10 @@
+# Méta-paquet de la suite flair : installe toutes les applications d'un coup.
+# Construire : makepkg (dans une copie de ce dossier), puis repo-add dans arch/x86_64/.
+pkgname=suite-flair
+pkgver=2026.11.17
+pkgrel=1
+pkgdesc="La suite flair : flair (fichiers), Flair Code (code) et Onde (navigateur)"
+arch=('any')
+url="https://vexlab-off.github.io/flair/"
+license=('MIT')
+depends=('flair' 'flair-code' 'onde')
